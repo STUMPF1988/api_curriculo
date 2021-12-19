@@ -50,7 +50,7 @@ app.post("/", async (req, res) =>{
 
 
 initConnection()//como o initConnection é uma promise, temos que colocar o then e o catch.
-.then(() => app.listen(8082, () => console.log("Server iniciou")))
+.then(() => app.listen(process.env.PORT || 8082, () => console.log("Server iniciou")))
 .catch((err) => {
     console.log("erro na comunicação com o BD");
     console.log(err);
