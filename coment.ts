@@ -1,8 +1,8 @@
-class Comentario {
-    constructor(
-      public nome: string,
-      public comentario: string
-    ) {}
-  }
+// class Comentario {
+//     constructor(
+//       public nome: string,
+//       public comentario: string
+//     ) {}
+//   }
   
-  export let comentarioList: Comentario[] = [];
+//   export let comentarioList: Comentario[] = [];
