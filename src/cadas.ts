@@ -2,8 +2,7 @@ class Cadastro {
     constructor(
       public nome: string,
       public telefone: string,
-      public email: string,
-      public comentario: string
+      public email: string
     ) {}
   }
   
