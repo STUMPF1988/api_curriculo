@@ -3,7 +3,7 @@ import express from "express";
 import cors from "cors";
 import { initConnection } from "./database/connection";
 import { CadastroController } from "./controllers/cadastro";
-import { ComentarioController } from "./controllers/comentario";
+import { ComentarioController } from "./controllers/cadastro";
 
 const app = express();
 app.use(express.json());
