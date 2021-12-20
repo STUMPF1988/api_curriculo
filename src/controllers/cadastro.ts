@@ -1,48 +1,48 @@
 
-import { getConnection } from '../database/connection';
+// import { getConnection } from '../database/connection';
 
-export class CadastroController {
+// export class CadastroController {
 
-async create(nome: string, telefone: string, email: string) {
-await getConnection().manager.query(
-   ` INSERT INTO curriculo.cadastro
-    (nome, telefone, email)
-    values
-    ($1, $2, $3)`,
-    [nome, telefone, email]
-);
-}
+// async create(nome: string, telefone: string, email: string) {
+// await getConnection().manager.query(
+//    ` INSERT INTO curriculo.cadastro
+//     (nome, telefone, email)
+//     values
+//     ($1, $2, $3)`,
+//     [nome, telefone, email]
+// );
+// }
 
 
-async list() {
-    const cadastro = await getConnection().manager.query(
-        "SELECT * FROM curriculo.cadastro"//aqui colocamos a tabela que queremos buscar.
-    );
+// async list() {
+//     const cadastro = await getConnection().manager.query(
+//         "SELECT * FROM curriculo.cadastro"//aqui colocamos a tabela que queremos buscar.
+//     );
 
-    return cadastro;
+//     return cadastro;
 
-}
-}
+// }
+// }
 
-export class ComentarioController {
+// export class ComentarioController {
 
-    async create(nome: string, comentario: string) {
-    await getConnection().manager.query(
-       ` INSERT INTO curriculo.comentario
-        (nome, comentario)
-        values
-        ($1, $2)`,
-        [nome, comentario]
-    );
-    }
+//     async create(nome: string, comentario: string) {
+//     await getConnection().manager.query(
+//        ` INSERT INTO curriculo.comentario
+//         (nome, comentario)
+//         values
+//         ($1, $2)`,
+//         [nome, comentario]
+//     );
+//     }
     
     
-    async list() {
-        const comentario = await getConnection().manager.query(
-            "SELECT * FROM curriculo.comentario"//aqui colocamos a tabela que queremos buscar.
-        );
+//     async list() {
+//         const comentario = await getConnection().manager.query(
+//             "SELECT * FROM curriculo.comentario"//aqui colocamos a tabela que queremos buscar.
+//         );
     
-        return comentario;
+//         return comentario;
     
-    }
-    }
+//     }
+//     }
