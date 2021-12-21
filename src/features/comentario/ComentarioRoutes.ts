@@ -1,6 +1,7 @@
 import {Request, Response, Router} from "express";
 import {ComentarioController} from "./ComentarioController";
 
+
 const comentarioRoutes = Router();
 
 comentarioRoutes.get("/", async (req: Request, res: Response) =>{

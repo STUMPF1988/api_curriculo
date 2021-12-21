@@ -1,13 +1,13 @@
 import express from "express";
 
-
+import cors from "cors";
 import { initConnection } from "./database/connection";
 import { cadastroRoutes } from "./features/cadastro/CadastroRoutes";
 import { comentarioRoutes } from "./features/comentario/ComentarioRoutes";
 
 const app = express();
 app.use(express.json());
-
+app.use(cors());
 
 app.use("/cadastro", cadastroRoutes);
 app.use("/comentario", comentarioRoutes);

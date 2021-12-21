@@ -1,6 +1,7 @@
 import {Request, Response, Router} from "express";
 import {CadastroController} from "./CadastroController";
 
+
 const cadastroRoutes = Router();
 
 cadastroRoutes.get("/", async (req: Request, res: Response) =>{
