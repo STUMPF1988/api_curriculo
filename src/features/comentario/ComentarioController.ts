@@ -9,7 +9,7 @@ export class ComentarioController {
 
   async create(nome: string, comentario: string) {
     try {
-      await this.connection.query(
+      await this.connection.manager.query(
         ` INSERT INTO curriculo.comentario
             (nome, comentario)
             values
@@ -29,7 +29,7 @@ export class ComentarioController {
   }
 
   async list() {
-    let result = await this.connection.query(
+    let result = await this.connection.manager.query(
       "SELECT * FROM curriculo.comentario" //aqui colocamos a tabela que queremos buscar.
     );
 

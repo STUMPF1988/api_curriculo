@@ -9,7 +9,7 @@ export class CadastroController {
 
   async create(nome: string, telefone: string, email: string) {
     try {
-      await this.connection.query(
+      await this.connection.manager.query(
         ` INSERT INTO curriculo.cadastro
             (nome, telefone, email)
             values
@@ -29,7 +29,7 @@ export class CadastroController {
   }
 
   async list() {
-    let result = await this.connection.query(
+    let result = await this.connection.manager.query(
       "SELECT * FROM curriculo.cadastro" //aqui colocamos a tabela que queremos buscar.
     );
 
